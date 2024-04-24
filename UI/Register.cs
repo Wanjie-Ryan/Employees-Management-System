@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Employees_Management_System.UI;
 
 namespace Employees_Management_System.UI
 {
@@ -15,6 +16,11 @@ namespace Employees_Management_System.UI
         public Register()
         {
             InitializeComponent();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
