@@ -75,9 +75,9 @@
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(676, 0);
+            this.panel2.Location = new System.Drawing.Point(662, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(523, 501);
+            this.panel2.Size = new System.Drawing.Size(537, 501);
             this.panel2.TabIndex = 1;
             // 
             // pictureBox1
@@ -201,7 +201,7 @@
             this.btnRegister.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegister.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnRegister.Location = new System.Drawing.Point(0, 459);
+            this.btnRegister.Location = new System.Drawing.Point(19, 449);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(445, 39);
             this.btnRegister.TabIndex = 8;
