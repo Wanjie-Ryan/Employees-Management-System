@@ -21,5 +21,11 @@ namespace Employees_Management_System.UI
         {
             this.Close();
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            Dashboard dashform = new Dashboard();
+            dashform.Show();
+        }
     }
 }
