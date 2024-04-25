@@ -22,5 +22,10 @@ namespace Employees_Management_System.UI
             Salary salaryform = new Salary();
             salaryform.Show();
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

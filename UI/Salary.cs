@@ -16,5 +16,10 @@ namespace Employees_Management_System.UI
         {
             InitializeComponent();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
