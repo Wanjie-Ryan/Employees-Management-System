@@ -38,6 +38,10 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblTime = new System.Windows.Forms.Label();
             this.lblusername = new System.Windows.Forms.Label();
+            this.btnDashboard = new System.Windows.Forms.Button();
+            this.btnAddEmployee = new System.Windows.Forms.Button();
+            this.btnSalary = new System.Windows.Forms.Button();
+            this.btnLogOut = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -53,7 +57,7 @@
             this.employeeManagementSystemToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1200, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(1200, 30);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -61,7 +65,7 @@
             // 
             this.employeeManagementSystemToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
             this.employeeManagementSystemToolStripMenuItem.Name = "employeeManagementSystemToolStripMenuItem";
-            this.employeeManagementSystemToolStripMenuItem.Size = new System.Drawing.Size(306, 25);
+            this.employeeManagementSystemToolStripMenuItem.Size = new System.Drawing.Size(306, 26);
             this.employeeManagementSystemToolStripMenuItem.Text = "Employee Management System";
             // 
             // contextMenuStrip1
@@ -84,30 +88,36 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Indigo;
+            this.panel1.Controls.Add(this.btnLogOut);
+            this.panel1.Controls.Add(this.btnSalary);
+            this.panel1.Controls.Add(this.btnAddEmployee);
+            this.panel1.Controls.Add(this.btnDashboard);
             this.panel1.Controls.Add(this.lblusername);
             this.panel1.Controls.Add(this.lblTime);
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Location = new System.Drawing.Point(0, 32);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 30);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(375, 418);
+            this.panel1.Size = new System.Drawing.Size(340, 561);
             this.panel1.TabIndex = 3;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(41, 20);
+            this.pictureBox2.Location = new System.Drawing.Point(22, 12);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(297, 124);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // lblTime
             // 
             this.lblTime.AutoSize = true;
             this.lblTime.Font = new System.Drawing.Font("Cooper Black", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTime.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblTime.Location = new System.Drawing.Point(34, 168);
+            this.lblTime.Location = new System.Drawing.Point(43, 168);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(131, 17);
             this.lblTime.TabIndex = 4;
@@ -123,6 +133,54 @@
             this.lblusername.Size = new System.Drawing.Size(105, 17);
             this.lblusername.TabIndex = 5;
             this.lblusername.Text = "Ryan Wanjie";
+            // 
+            // btnDashboard
+            // 
+            this.btnDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDashboard.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnDashboard.Location = new System.Drawing.Point(46, 228);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Size = new System.Drawing.Size(230, 45);
+            this.btnDashboard.TabIndex = 4;
+            this.btnDashboard.Text = "Dashboard";
+            this.btnDashboard.UseVisualStyleBackColor = true;
+            // 
+            // btnAddEmployee
+            // 
+            this.btnAddEmployee.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddEmployee.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnAddEmployee.Location = new System.Drawing.Point(46, 326);
+            this.btnAddEmployee.Name = "btnAddEmployee";
+            this.btnAddEmployee.Size = new System.Drawing.Size(230, 45);
+            this.btnAddEmployee.TabIndex = 6;
+            this.btnAddEmployee.Text = "Add Employee";
+            this.btnAddEmployee.UseVisualStyleBackColor = true;
+            // 
+            // btnSalary
+            // 
+            this.btnSalary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalary.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnSalary.Location = new System.Drawing.Point(46, 418);
+            this.btnSalary.Name = "btnSalary";
+            this.btnSalary.Size = new System.Drawing.Size(230, 45);
+            this.btnSalary.TabIndex = 7;
+            this.btnSalary.Text = "Salary";
+            this.btnSalary.UseVisualStyleBackColor = true;
+            // 
+            // btnLogOut
+            // 
+            this.btnLogOut.BackColor = System.Drawing.Color.Red;
+            this.btnLogOut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogOut.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnLogOut.Location = new System.Drawing.Point(3, 513);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(153, 45);
+            this.btnLogOut.TabIndex = 8;
+            this.btnLogOut.Text = "Log Out";
+            this.btnLogOut.UseVisualStyleBackColor = false;
             // 
             // Dashboard
             // 
@@ -160,5 +218,9 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblusername;
         private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Button btnDashboard;
+        private System.Windows.Forms.Button btnSalary;
+        private System.Windows.Forms.Button btnAddEmployee;
+        private System.Windows.Forms.Button btnLogOut;
     }
 }
