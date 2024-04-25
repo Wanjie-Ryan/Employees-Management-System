@@ -7,13 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Employees_Management_System.UI;
 
 namespace Employees_Management_System.UI
 {
-    public partial class Register : Form
+    public partial class Login : Form
     {
-        public Register()
+        public Login()
         {
             InitializeComponent();
         }
@@ -21,18 +20,6 @@ namespace Employees_Management_System.UI
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void btnRegister_Click(object sender, EventArgs e)
-        {
-            Login loginform = new Login();
-            loginform.Show();
-        }
-
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-            Login loginform = new Login();
-            loginform.Show();
         }
     }
 }
