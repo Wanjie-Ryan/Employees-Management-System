@@ -247,6 +247,7 @@
             this.panel3.Controls.Add(this.lblTotalEmpCount);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.pictureBox4);
+            this.panel3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel3.Location = new System.Drawing.Point(17, 37);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(242, 136);
@@ -258,6 +259,7 @@
             this.panel4.Controls.Add(this.lblInactiveEmp);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.pictureBox5);
+            this.panel4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel4.Location = new System.Drawing.Point(281, 37);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(248, 136);
@@ -269,6 +271,7 @@
             this.panel5.Controls.Add(this.label4);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.pictureBox6);
+            this.panel5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel5.Location = new System.Drawing.Point(547, 37);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(251, 136);
