@@ -148,6 +148,7 @@
             this.btnSalary.TabIndex = 7;
             this.btnSalary.Text = "Salary";
             this.btnSalary.UseVisualStyleBackColor = true;
+            this.btnSalary.Click += new System.EventHandler(this.btnSalary_Click);
             // 
             // btnAddEmployee
             // 

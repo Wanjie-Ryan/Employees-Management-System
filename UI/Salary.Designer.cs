@@ -41,10 +41,29 @@
             this.lblTime = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtFullname = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtEmpID = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtSalary = new System.Windows.Forms.TextBox();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.txtPosition = new System.Windows.Forms.TextBox();
+            this.dgvSalary = new System.Windows.Forms.DataGridView();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSalary)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -185,11 +204,165 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.groupBox2);
+            this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(340, 29);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(860, 562);
             this.panel2.TabIndex = 6;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtPosition);
+            this.groupBox1.Controls.Add(this.btnClear);
+            this.groupBox1.Controls.Add(this.btnUpdate);
+            this.groupBox1.Controls.Add(this.txtSalary);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.txtFullname);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.txtEmpID);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Location = new System.Drawing.Point(17, 15);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(321, 506);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.txtSearch);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.dgvSalary);
+            this.groupBox2.Location = new System.Drawing.Point(344, 15);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(504, 385);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Employees";
+            // 
+            // txtFullname
+            // 
+            this.txtFullname.Cursor = System.Windows.Forms.Cursors.No;
+            this.txtFullname.Location = new System.Drawing.Point(11, 153);
+            this.txtFullname.Name = "txtFullname";
+            this.txtFullname.ReadOnly = true;
+            this.txtFullname.Size = new System.Drawing.Size(237, 28);
+            this.txtFullname.TabIndex = 7;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(7, 123);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 21);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "FullName";
+            // 
+            // txtEmpID
+            // 
+            this.txtEmpID.Cursor = System.Windows.Forms.Cursors.No;
+            this.txtEmpID.Location = new System.Drawing.Point(10, 72);
+            this.txtEmpID.Name = "txtEmpID";
+            this.txtEmpID.ReadOnly = true;
+            this.txtEmpID.Size = new System.Drawing.Size(237, 28);
+            this.txtEmpID.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(126, 21);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Employee ID";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 207);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(85, 21);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "Position";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 311);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(70, 21);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "Salary";
+            // 
+            // txtSalary
+            // 
+            this.txtSalary.Location = new System.Drawing.Point(10, 357);
+            this.txtSalary.Name = "txtSalary";
+            this.txtSalary.Size = new System.Drawing.Size(237, 28);
+            this.txtSalary.TabIndex = 23;
+            // 
+            // btnClear
+            // 
+            this.btnClear.BackColor = System.Drawing.Color.Indigo;
+            this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.ForeColor = System.Drawing.Color.White;
+            this.btnClear.Location = new System.Drawing.Point(151, 431);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(97, 33);
+            this.btnClear.TabIndex = 25;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = false;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.Indigo;
+            this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Location = new System.Drawing.Point(11, 431);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(97, 33);
+            this.btnUpdate.TabIndex = 24;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            // 
+            // txtPosition
+            // 
+            this.txtPosition.Cursor = System.Windows.Forms.Cursors.No;
+            this.txtPosition.Location = new System.Drawing.Point(10, 253);
+            this.txtPosition.Name = "txtPosition";
+            this.txtPosition.ReadOnly = true;
+            this.txtPosition.Size = new System.Drawing.Size(237, 28);
+            this.txtPosition.TabIndex = 26;
+            // 
+            // dgvSalary
+            // 
+            this.dgvSalary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSalary.Location = new System.Drawing.Point(6, 85);
+            this.dgvSalary.Name = "dgvSalary";
+            this.dgvSalary.RowHeadersWidth = 51;
+            this.dgvSalary.RowTemplate.Height = 24;
+            this.dgvSalary.Size = new System.Drawing.Size(492, 167);
+            this.dgvSalary.TabIndex = 0;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 46);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(73, 21);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Search";
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(103, 46);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(395, 28);
+            this.txtSearch.TabIndex = 27;
             // 
             // Salary
             // 
@@ -212,6 +385,12 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSalary)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,5 +410,20 @@
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox txtFullname;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtEmpID;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtSalary;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.TextBox txtPosition;
+        private System.Windows.Forms.DataGridView dgvSalary;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Label label4;
     }
 }

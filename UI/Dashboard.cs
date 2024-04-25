@@ -37,5 +37,11 @@ namespace Employees_Management_System.UI
             Employee employeeForm = new Employee();
             employeeForm.Show();
         }
+
+        private void btnSalary_Click(object sender, EventArgs e)
+        {
+            Salary salaryform = new Salary();
+            salaryform.Show();
+        }
     }
 }
