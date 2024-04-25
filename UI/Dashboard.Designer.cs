@@ -380,7 +380,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.Indigo;
+            this.btnDelete.BackColor = System.Drawing.Color.Crimson;
             this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.ForeColor = System.Drawing.Color.White;
@@ -406,6 +406,7 @@
             // 
             // pbProfilePic
             // 
+            this.pbProfilePic.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.pbProfilePic.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbProfilePic.Location = new System.Drawing.Point(622, 182);
             this.pbProfilePic.Name = "pbProfilePic";
