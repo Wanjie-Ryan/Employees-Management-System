@@ -275,11 +275,8 @@
             // 
             this.cmbStatus.FormattingEnabled = true;
             this.cmbStatus.Items.AddRange(new object[] {
-            "Single ",
-            "Married",
-            "Divorced",
-            "Widow",
-            "Prefer not to say"});
+            "Active ",
+            "Inactive"});
             this.cmbStatus.Location = new System.Drawing.Point(517, 133);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(199, 29);
