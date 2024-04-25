@@ -122,7 +122,7 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Location = new System.Drawing.Point(662, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(537, 501);
+            this.panel2.Size = new System.Drawing.Size(538, 501);
             this.panel2.TabIndex = 1;
             // 
             // cbShowPwd
@@ -230,6 +230,7 @@
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Cooper Black", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Register";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
