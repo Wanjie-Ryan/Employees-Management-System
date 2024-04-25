@@ -84,7 +84,7 @@
             this.employeeManagementSystemToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1200, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1200, 29);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -124,9 +124,9 @@
             this.panel1.Controls.Add(this.lblTime);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 30);
+            this.panel1.Location = new System.Drawing.Point(0, 29);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(340, 561);
+            this.panel1.Size = new System.Drawing.Size(340, 562);
             this.panel1.TabIndex = 3;
             // 
             // pictureBox2
@@ -190,6 +190,7 @@
             this.btnAddEmployee.TabIndex = 6;
             this.btnAddEmployee.Text = "Add Employee";
             this.btnAddEmployee.UseVisualStyleBackColor = true;
+            this.btnAddEmployee.Click += new System.EventHandler(this.btnAddEmployee_Click);
             // 
             // btnSalary
             // 
@@ -225,9 +226,9 @@
             this.panel2.Controls.Add(this.groupBox2);
             this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(340, 30);
+            this.panel2.Location = new System.Drawing.Point(340, 29);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(860, 561);
+            this.panel2.Size = new System.Drawing.Size(860, 562);
             this.panel2.TabIndex = 4;
             // 
             // groupBox1

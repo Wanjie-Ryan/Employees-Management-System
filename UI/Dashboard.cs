@@ -31,5 +31,11 @@ namespace Employees_Management_System.UI
         {
             this.Close();
         }
+
+        private void btnAddEmployee_Click(object sender, EventArgs e)
+        {
+            Employee employeeForm = new Employee();
+            employeeForm.Show();
+        }
     }
 }
