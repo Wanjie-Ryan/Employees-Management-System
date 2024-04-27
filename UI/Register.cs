@@ -5,9 +5,13 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Employees_Management_System.Data_Logics;
+using Employees_Management_System.Data_Manipulation;
 using Employees_Management_System.UI;
+using Org.BouncyCastle.Bcpg.Sig;
 
 namespace Employees_Management_System.UI
 {
@@ -18,6 +22,9 @@ namespace Employees_Management_System.UI
             InitializeComponent();
         }
 
+        RegisterDLL regDLL = new RegisterDLL();
+        RegisterBLL regBLL = new RegisterBLL();
+
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -25,8 +32,45 @@ namespace Employees_Management_System.UI
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            Login loginform = new Login();
-            loginform.Show();
+            if (string.IsNullOrEmpty(txtUsername.Text) || string.IsNullOrEmpty(txtEmail.Text) || string.IsNullOrEmpty(txtPwd.Text))
+            {
+                MessageBox.Show("Please Fill in all the fields.");
+                return;
+            }
+
+            if (!Regex.IsMatch(txtEmail.Text, @"^[^@]+@(gmail|yahoo)\.com$"))
+            {
+                MessageBox.Show("Please enter a valid Gmail or Yahoo email address.");
+                return;
+            }
+
+            regDLL.username = txtUsername.Text;
+            regDLL.email = txtEmail.Text;
+            regDLL.password = txtPwd.Text;
+
+            bool Success = regBLL.Register(regDLL);
+
+            if (Success == true)
+            {
+                MessageBox.Show(
+                    "Registration Successful",
+                    "Success",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
+
+                Login loginform = new Login();
+                loginform.Show();
+            }
+            else
+            {
+                MessageBox.Show(
+                    "Registration Failed",
+                    "Failure",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
+            }
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -34,5 +78,22 @@ namespace Employees_Management_System.UI
             Login loginform = new Login();
             loginform.Show();
         }
+
+
+        // TOGGLING THE PASSWORD
+        private void cbShowPwd_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbShowPwd.Checked)
+            {
+                txtPwd.PasswordChar = '\0'; // Show password 
+            }
+            else
+            {
+                txtPwd.PasswordChar = '*';  // Hide password
+            }
+        }
+
+
+
     }
 }

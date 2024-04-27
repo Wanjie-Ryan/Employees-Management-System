@@ -20,10 +20,10 @@ namespace Employees_Management_System.Data_Manipulation
                 {
                     string hashedpassword = BCrypt.Net.BCrypt.EnhancedHashPassword(r.password);
                     string sql =
-                        "INSERT INTO users (userId, username, email, password) VALUES (@userId, @username, @email, @password)";
+                        "INSERT INTO users (user_id, username, email, password) VALUES (@user_id, @username, @email, @password)";
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
 
-                    cmd.Parameters.AddWithValue("@userId", r.userId);
+                    cmd.Parameters.AddWithValue("@user_id", r.userId);
                     cmd.Parameters.AddWithValue("@username", r.username);
                     cmd.Parameters.AddWithValue("@email", r.email);
                     cmd.Parameters.AddWithValue("@password", hashedpassword);

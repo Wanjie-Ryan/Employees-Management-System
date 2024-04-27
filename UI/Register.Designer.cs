@@ -135,6 +135,7 @@
             this.cbShowPwd.TabIndex = 9;
             this.cbShowPwd.Text = "Show Password";
             this.cbShowPwd.UseVisualStyleBackColor = true;
+            this.cbShowPwd.CheckedChanged += new System.EventHandler(this.cbShowPwd_CheckedChanged);
             // 
             // btnRegister
             // 
