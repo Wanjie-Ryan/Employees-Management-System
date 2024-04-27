@@ -32,15 +32,40 @@ namespace Employees_Management_System.UI
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtUsername.Text) || string.IsNullOrEmpty(txtEmail.Text) || string.IsNullOrEmpty(txtPwd.Text))
+            if (
+                string.IsNullOrEmpty(txtUsername.Text)
+                || string.IsNullOrEmpty(txtEmail.Text)
+                || string.IsNullOrEmpty(txtPwd.Text)
+            )
             {
-                MessageBox.Show("Please Fill in all the fields.");
+                MessageBox.Show(
+                    "Please Fill in all the fields.",
+                    "Missing Fields",
+                    MessageBoxButtons.RetryCancel,
+                    MessageBoxIcon.Warning
+                );
                 return;
             }
 
             if (!Regex.IsMatch(txtEmail.Text, @"^[^@]+@(gmail|yahoo)\.com$"))
             {
-                MessageBox.Show("Please enter a valid Gmail or Yahoo email address.");
+                MessageBox.Show(
+                    "Please enter a valid Gmail or Yahoo email address.",
+                    "Invalid Email Address",
+                    MessageBoxButtons.RetryCancel,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
+
+            if (txtPwd.Text.Length < 6)
+            {
+                MessageBox.Show(
+                    "The length of the password must be more than 6 characters",
+                    "Short Password",
+                    MessageBoxButtons.RetryCancel,
+                    MessageBoxIcon.Warning
+                );
                 return;
             }
 
@@ -79,21 +104,17 @@ namespace Employees_Management_System.UI
             loginform.Show();
         }
 
-
         // TOGGLING THE PASSWORD
         private void cbShowPwd_CheckedChanged(object sender, EventArgs e)
         {
             if (cbShowPwd.Checked)
             {
-                txtPwd.PasswordChar = '\0'; // Show password 
+                txtPwd.PasswordChar = '\0'; // Show password
             }
             else
             {
-                txtPwd.PasswordChar = '*';  // Hide password
+                txtPwd.PasswordChar = '*'; // Hide password
             }
         }
-
-
-
     }
 }
