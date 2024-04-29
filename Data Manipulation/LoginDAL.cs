@@ -1,11 +1,11 @@
-﻿using Employees_Management_System.Data_Logics;
-using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Employees_Management_System.Data_Logics;
+using MySql.Data.MySqlClient;
 
 namespace Employees_Management_System.Data_Manipulation
 {
@@ -16,7 +16,7 @@ namespace Employees_Management_System.Data_Manipulation
             bool isSuccess = false;
             bool verifiedPwd = false;
 
-            using(MySqlConnection conn = new MySqlConnection(Program.GetConnectionString()))
+            using (MySqlConnection conn = new MySqlConnection(Program.GetConnectionString()))
             {
                 try
                 {
@@ -29,7 +29,7 @@ namespace Employees_Management_System.Data_Manipulation
 
                     object result = cmd.ExecuteScalar();
 
-                    if(result != null)
+                    if (result != null)
                     {
                         string hashedPassword = result.ToString();
                         verifiedPwd = BCrypt.Net.BCrypt.Verify(l.password, hashedPassword);
@@ -39,10 +39,8 @@ namespace Employees_Management_System.Data_Manipulation
                     {
                         isSuccess = false;
                     }
-
-
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
@@ -51,8 +49,6 @@ namespace Employees_Management_System.Data_Manipulation
                     conn.Close();
                 }
             }
-
-
 
             return isSuccess;
         }

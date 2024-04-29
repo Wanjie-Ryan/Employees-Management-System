@@ -16,7 +16,7 @@ namespace Employees_Management_System.UI
         {
             InitializeComponent();
         }
-
+       
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
@@ -42,6 +42,16 @@ namespace Employees_Management_System.UI
         {
             Salary salaryform = new Salary();
             salaryform.Show();
+        }
+
+        private void lblusername_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+            lblusername.Text = Register.identityname;
         }
     }
 }
