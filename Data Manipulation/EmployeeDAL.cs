@@ -96,7 +96,7 @@ namespace Employees_Management_System.Data_Manipulation
                 try
                 {
                     string sql =
-                        "UPDATE employees SET employee_id =@employee_id, fullname = @fullname, gender =@gender, phone = @phone, position = @position, status =@status, salary =@salary ";
+                        "UPDATE employees SET fullname = @fullname, gender =@gender, phone = @phone, position = @position, status =@status, salary =@salary WHERE employee_id = @employee_id ";
 
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
 
