@@ -23,10 +23,7 @@ namespace Employees_Management_System.UI
             salaryform.Show();
         }
 
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
+        private void label8_Click(object sender, EventArgs e) { }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
