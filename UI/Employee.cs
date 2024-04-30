@@ -148,6 +148,16 @@ namespace Employees_Management_System.UI
                 );
                 return; // Exit the method if no row is selected
             }
+            if (string.IsNullOrEmpty(txtEmpID.Text))
+            {
+                MessageBox.Show(
+                    "Please Fill in all the fields.",
+                    "Missing Fields",
+                    MessageBoxButtons.RetryCancel,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
 
             empBLL.employeeId = int.Parse(txtEmpID.Text);
             empBLL.fullname = txtFullname.Text;
