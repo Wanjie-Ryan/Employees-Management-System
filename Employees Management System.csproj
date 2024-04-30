@@ -119,8 +119,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data Logics\EmployeeBLL.cs" />
     <Compile Include="Data Logics\LoginBLL.cs" />
     <Compile Include="Data Logics\RegisterDLL.cs" />
+    <Compile Include="Data Manipulation\EmployeeDAL.cs" />
     <Compile Include="Data Manipulation\LoginDAL.cs" />
     <Compile Include="Data Manipulation\RegisterBLL.cs" />
     <Compile Include="Program.cs" />

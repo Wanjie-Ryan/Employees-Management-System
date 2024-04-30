@@ -32,5 +32,25 @@ namespace Employees_Management_System.UI
         {
             this.Close();
         }
+
+        private void Employee_Load(object sender, EventArgs e)
+        {
+            DateTime now = DateTime.Now;
+            string greeting;
+            if (now.Hour >= 0 && now.Hour < 12)
+            {
+                greeting = "Good Morning";
+            }
+            else if (now.Hour >= 12 && now.Hour < 16)
+            {
+                greeting = "Good Afternoon";
+            }
+            else
+            {
+                greeting = "Good Evening";
+            }
+            lblTime.Text = $"{greeting} {Login.identityname}";
+            //lblusername.Text = Login.identityname;
+        }
     }
 }
