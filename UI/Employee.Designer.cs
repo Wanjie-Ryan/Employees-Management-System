@@ -62,7 +62,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DGVEmpData = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -71,7 +71,7 @@
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePic)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVEmpData)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -91,7 +91,7 @@
             // 
             this.employeeManagementSystemToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
             this.employeeManagementSystemToolStripMenuItem.Name = "employeeManagementSystemToolStripMenuItem";
-            this.employeeManagementSystemToolStripMenuItem.Size = new System.Drawing.Size(306, 25);
+            this.employeeManagementSystemToolStripMenuItem.Size = new System.Drawing.Size(306, 26);
             this.employeeManagementSystemToolStripMenuItem.Text = "Employee Management System";
             // 
             // pictureBox1
@@ -204,10 +204,9 @@
             // 
             this.panel2.Controls.Add(this.groupBox2);
             this.panel2.Controls.Add(this.groupBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(340, 30);
+            this.panel2.Location = new System.Drawing.Point(340, 29);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(860, 561);
+            this.panel2.Size = new System.Drawing.Size(848, 562);
             this.panel2.TabIndex = 7;
             // 
             // groupBox2
@@ -348,6 +347,7 @@
             this.btnAdd.TabIndex = 12;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // label6
             // 
@@ -429,7 +429,7 @@
             // 
             this.groupBox1.Controls.Add(this.txtSearch);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.DGVEmpData);
             this.groupBox1.Location = new System.Drawing.Point(6, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(842, 255);
@@ -454,15 +454,15 @@
             this.label8.Text = "Search";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
-            // dataGridView1
+            // DGVEmpData
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(22, 79);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(804, 170);
-            this.dataGridView1.TabIndex = 0;
+            this.DGVEmpData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVEmpData.Location = new System.Drawing.Point(22, 79);
+            this.DGVEmpData.Name = "DGVEmpData";
+            this.DGVEmpData.RowHeadersWidth = 51;
+            this.DGVEmpData.RowTemplate.Height = 24;
+            this.DGVEmpData.Size = new System.Drawing.Size(804, 170);
+            this.DGVEmpData.TabIndex = 0;
             // 
             // Employee
             // 
@@ -492,7 +492,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePic)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVEmpData)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -512,7 +512,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DGVEmpData;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ComboBox cmbStatus;
         private System.Windows.Forms.ComboBox cmbPosition;
