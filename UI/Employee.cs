@@ -1,6 +1,4 @@
-﻿using Employees_Management_System.Data_Logics;
-using Employees_Management_System.Data_Manipulation;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Employees_Management_System.Data_Logics;
+using Employees_Management_System.Data_Manipulation;
 
 namespace Employees_Management_System.UI
 {
@@ -21,6 +21,7 @@ namespace Employees_Management_System.UI
 
         EmployeeBLL empBLL = new EmployeeBLL();
         EmployeeDAL empDAL = new EmployeeDAL();
+
         private void btnSalary_Click(object sender, EventArgs e)
         {
             Salary salaryform = new Salary();
@@ -43,6 +44,7 @@ namespace Employees_Management_System.UI
             cmbPosition.Text = "";
             cmbStatus.Text = "";
         }
+
         private void Employee_Load(object sender, EventArgs e)
         {
             DataTable dt = empDAL.Select();
@@ -68,8 +70,14 @@ namespace Employees_Management_System.UI
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
-            if (string.IsNullOrEmpty(txtEmpID.Text) || string.IsNullOrEmpty(txtFullname.Text) || string.IsNullOrEmpty(cmbGender.Text) || string.IsNullOrEmpty(txtphoneNumber.Text) || string.IsNullOrEmpty(cmbPosition.Text) || string.IsNullOrEmpty(cmbStatus.Text))
+            if (
+                string.IsNullOrEmpty(txtEmpID.Text)
+                || string.IsNullOrEmpty(txtFullname.Text)
+                || string.IsNullOrEmpty(cmbGender.Text)
+                || string.IsNullOrEmpty(txtphoneNumber.Text)
+                || string.IsNullOrEmpty(cmbPosition.Text)
+                || string.IsNullOrEmpty(cmbStatus.Text)
+            )
             {
                 MessageBox.Show(
                     "Please Fill in all the fields.",
@@ -92,29 +100,58 @@ namespace Employees_Management_System.UI
 
             bool success = empDAL.Insert(empBLL);
 
-            if(success == true)
+            if (success == true)
             {
                 MessageBox.Show(
-                   "Employee Added Successfully",
-                   "Success",
-                   MessageBoxButtons.OK,
-                   MessageBoxIcon.Information
-               );
+                    "Employee Added Successfully",
+                    "Success",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
 
                 DataTable dt = empDAL.Select();
                 DGVEmpData.DataSource = dt;
                 Clear();
-
             }
             else
             {
                 MessageBox.Show(
-                   "Failed to Add Employee",
-                   "Failed",
-                   MessageBoxButtons.OK,
-                   MessageBoxIcon.Error
-               );
+                    "Failed to Add Employee",
+                    "Failed",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
             }
+        }
+
+        private void DGVEmpData_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int rows = e.RowIndex;
+
+            txtEmpID.Text = DGVEmpData.Rows[rows].Cells[0].Value.ToString();
+            txtFullname.Text = DGVEmpData.Rows[rows].Cells[1].Value.ToString();
+            cmbGender.Text = DGVEmpData.Rows[rows].Cells[2].Value.ToString();
+            txtphoneNumber.Text = DGVEmpData.Rows[rows].Cells[3].Value.ToString();
+            cmbPosition.Text = DGVEmpData.Rows[rows].Cells[4].Value.ToString();
+            cmbStatus.Text = DGVEmpData.Rows[rows].Cells[5].Value.ToString();   
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (DGVEmpData.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select an Employee from the list before attempting to Update.", "No Employee Selected", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return; // Exit the method if no row is selected
+            }
+
+            empBLL.employeeId = int.Parse(txtEmpID.Text);
+            empBLL.fullname = txtFullname.Text;
+            empBLL.gender = cmbGender.Text;
+            empBLL.phone = txtphoneNumber.Text;
+            empBLL.position = cmbPosition.Text;
+            empBLL.status = cmbStatus.Text;
+
+
         }
     }
 }

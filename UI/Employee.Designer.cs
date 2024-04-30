@@ -334,6 +334,7 @@
             this.btnUpdate.TabIndex = 13;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnAdd
             // 
@@ -463,6 +464,7 @@
             this.DGVEmpData.RowTemplate.Height = 24;
             this.DGVEmpData.Size = new System.Drawing.Size(804, 170);
             this.DGVEmpData.TabIndex = 0;
+            this.DGVEmpData.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGVEmpData_RowHeaderMouseClick);
             // 
             // Employee
             // 
