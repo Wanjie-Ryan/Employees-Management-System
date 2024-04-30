@@ -22,7 +22,7 @@ namespace Employees_Management_System.UI
 
         LoginBLL login = new LoginBLL();
         LoginDAL logdal = new LoginDAL();
-
+        public static string identityname;
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -64,6 +64,13 @@ namespace Employees_Management_System.UI
             }
             login.email = txtEmail.Text;
             login.password = txtPwd.Text;
+            identityname = txtEmail.Text.Trim();
+
+            int atIndex = identityname.IndexOf('@');
+            if (atIndex != -1)
+            {
+                identityname = identityname.Substring(0, atIndex);
+            }
 
             bool success = logdal.Login(login);
 

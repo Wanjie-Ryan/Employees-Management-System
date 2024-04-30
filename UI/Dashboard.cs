@@ -1,4 +1,5 @@
-﻿using System;
+﻿using K4os.Hash.xxHash;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -49,9 +50,26 @@ namespace Employees_Management_System.UI
             
         }
 
+
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            lblusername.Text = Register.identityname;
+
+            DateTime now = DateTime.Now;
+            string greeting;
+            if(now.Hour >=0 && now.Hour < 12)
+            {
+                greeting = "Good Morning";
+            }
+            else if (now.Hour >=12 && now.Hour < 16)
+            {
+                greeting = "Good Afternoon";
+            }
+            else
+            {
+                greeting = "Good Evening";
+            }
+            lblTime.Text =$"{greeting} {Login.identityname}";
+            //lblusername.Text = Login.identityname;
         }
     }
 }

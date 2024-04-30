@@ -39,7 +39,6 @@
             this.btnSalary = new System.Windows.Forms.Button();
             this.btnAddEmployee = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
-            this.lblusername = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -117,7 +116,6 @@
             this.panel1.Controls.Add(this.btnSalary);
             this.panel1.Controls.Add(this.btnAddEmployee);
             this.panel1.Controls.Add(this.btnDashboard);
-            this.panel1.Controls.Add(this.lblusername);
             this.panel1.Controls.Add(this.lblTime);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -186,28 +184,17 @@
             this.btnDashboard.UseVisualStyleBackColor = true;
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
-            // lblusername
-            // 
-            this.lblusername.AutoSize = true;
-            this.lblusername.Font = new System.Drawing.Font("Cooper Black", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblusername.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblusername.Location = new System.Drawing.Point(171, 168);
-            this.lblusername.Name = "lblusername";
-            this.lblusername.Size = new System.Drawing.Size(105, 17);
-            this.lblusername.TabIndex = 5;
-            this.lblusername.Text = "Ryan Wanjie";
-            this.lblusername.Click += new System.EventHandler(this.lblusername_Click);
-            // 
             // lblTime
             // 
             this.lblTime.AutoSize = true;
             this.lblTime.Font = new System.Drawing.Font("Cooper Black", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTime.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblTime.Location = new System.Drawing.Point(43, 168);
+            this.lblTime.Location = new System.Drawing.Point(89, 168);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(131, 17);
             this.lblTime.TabIndex = 4;
             this.lblTime.Text = "Good Afternoon";
+            this.lblTime.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // pictureBox2
             // 
@@ -432,7 +419,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label lblusername;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Button btnSalary;

@@ -24,7 +24,8 @@ namespace Employees_Management_System.UI
 
         RegisterDLL regDLL = new RegisterDLL();
         RegisterBLL regBLL = new RegisterBLL();
-        public static string identityname;
+
+        //public static string identityname;
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -73,7 +74,7 @@ namespace Employees_Management_System.UI
             regDLL.username = txtUsername.Text;
             regDLL.email = txtEmail.Text;
             regDLL.password = txtPwd.Text;
-            identityname = txtUsername.Text;
+            //identityname = txtUsername.Text;
 
             bool Success = regBLL.Register(regDLL);
 
