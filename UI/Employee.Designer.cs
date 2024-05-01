@@ -83,7 +83,7 @@
             this.employeeManagementSystemToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1200, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1200, 29);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -91,7 +91,7 @@
             // 
             this.employeeManagementSystemToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
             this.employeeManagementSystemToolStripMenuItem.Name = "employeeManagementSystemToolStripMenuItem";
-            this.employeeManagementSystemToolStripMenuItem.Size = new System.Drawing.Size(306, 26);
+            this.employeeManagementSystemToolStripMenuItem.Size = new System.Drawing.Size(306, 25);
             this.employeeManagementSystemToolStripMenuItem.Text = "Employee Management System";
             // 
             // pictureBox1
@@ -116,9 +116,9 @@
             this.panel1.Controls.Add(this.lblTime);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 30);
+            this.panel1.Location = new System.Drawing.Point(0, 29);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(340, 561);
+            this.panel1.Size = new System.Drawing.Size(340, 562);
             this.panel1.TabIndex = 4;
             // 
             // btnLogOut
@@ -322,6 +322,7 @@
             this.btnDelete.TabIndex = 14;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -445,6 +446,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(395, 28);
             this.txtSearch.TabIndex = 29;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // label8
             // 

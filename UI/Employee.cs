@@ -196,5 +196,72 @@ namespace Employees_Management_System.UI
         {
             Clear();
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (DGVEmpData.SelectedRows.Count == 0)
+            {
+                MessageBox.Show(
+                    "Please select an Employee from the list before attempting to Delete.",
+                    "No Employee Selected",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
+                return; // Exit the method if no row is selected
+            }
+            if (string.IsNullOrEmpty(txtEmpID.Text))
+            {
+                MessageBox.Show(
+                    "Please Fill in all the fields.",
+                    "Missing Fields",
+                    MessageBoxButtons.RetryCancel,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
+
+            empBLL.employeeId = int.Parse(txtEmpID.Text);
+
+            bool success = empDAL.Delete(empBLL);
+
+            if (success == true)
+            {
+                MessageBox.Show(
+                    "Employee Deleted Successfully",
+                    "Success",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
+
+                DataTable dt = empDAL.Select();
+                DGVEmpData.DataSource = dt;
+                Clear();
+            }
+            else
+            {
+                MessageBox.Show(
+                    "Failed to Delete Employee",
+                    "Failed",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
+            }
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            string keyword = txtSearch.Text;
+
+            if (keyword != "")
+            {
+                DataTable dt = empDAL.Search(keyword);
+                DGVEmpData.DataSource = dt;
+            }
+            else
+            {
+                DataTable dt = empDAL.Select();
+                DGVEmpData.DataSource = dt;
+            }
+        }
     }
 }

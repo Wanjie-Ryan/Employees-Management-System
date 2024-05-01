@@ -122,9 +122,11 @@
     <Compile Include="Data Logics\EmployeeBLL.cs" />
     <Compile Include="Data Logics\LoginBLL.cs" />
     <Compile Include="Data Logics\RegisterDLL.cs" />
+    <Compile Include="Data Logics\SalaryBLL.cs" />
     <Compile Include="Data Manipulation\EmployeeDAL.cs" />
     <Compile Include="Data Manipulation\LoginDAL.cs" />
     <Compile Include="Data Manipulation\RegisterBLL.cs" />
+    <Compile Include="Data Manipulation\SalaryDAL.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UI\Dashboard.cs">
