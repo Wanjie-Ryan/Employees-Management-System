@@ -86,11 +86,11 @@ namespace Employees_Management_System.Data_Manipulation
             {
                 try
                 {
-
+                    string sql = "SELECT * FROM employees WHERE fullname LIKE '%" +keyword+ "%' OR position LIKE '%" + keyword+ "%' OR gender LIKE '%" +keyword+ "%' ";
                 }
                 catch(Exception ex)
                 {
-
+                    MessageBox.Show(ex.Message);
                 }
                 finally
                 {
