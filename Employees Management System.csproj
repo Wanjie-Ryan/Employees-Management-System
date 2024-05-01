@@ -123,6 +123,7 @@
     <Compile Include="Data Logics\LoginBLL.cs" />
     <Compile Include="Data Logics\RegisterDLL.cs" />
     <Compile Include="Data Logics\SalaryBLL.cs" />
+    <Compile Include="Data Manipulation\DashboardDAL.cs" />
     <Compile Include="Data Manipulation\EmployeeDAL.cs" />
     <Compile Include="Data Manipulation\LoginDAL.cs" />
     <Compile Include="Data Manipulation\RegisterBLL.cs" />
