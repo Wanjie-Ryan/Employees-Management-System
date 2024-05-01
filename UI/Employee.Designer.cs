@@ -41,10 +41,10 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnSelectImage = new System.Windows.Forms.Button();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.cmbPosition = new System.Windows.Forms.ComboBox();
             this.cmbGender = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.pbProfilePic = new System.Windows.Forms.PictureBox();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -211,10 +211,10 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnSelectImage);
             this.groupBox2.Controls.Add(this.cmbStatus);
             this.groupBox2.Controls.Add(this.cmbPosition);
             this.groupBox2.Controls.Add(this.cmbGender);
-            this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.pbProfilePic);
             this.groupBox2.Controls.Add(this.btnClear);
             this.groupBox2.Controls.Add(this.btnDelete);
@@ -234,6 +234,20 @@
             this.groupBox2.Size = new System.Drawing.Size(842, 279);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
+            // 
+            // btnSelectImage
+            // 
+            this.btnSelectImage.BackColor = System.Drawing.Color.Indigo;
+            this.btnSelectImage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSelectImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelectImage.ForeColor = System.Drawing.Color.White;
+            this.btnSelectImage.Location = new System.Drawing.Point(680, 228);
+            this.btnSelectImage.Name = "btnSelectImage";
+            this.btnSelectImage.Size = new System.Drawing.Size(146, 33);
+            this.btnSelectImage.TabIndex = 21;
+            this.btnSelectImage.Text = "Select Image";
+            this.btnSelectImage.UseVisualStyleBackColor = false;
+            this.btnSelectImage.Click += new System.EventHandler(this.btnSelectImage_Click);
             // 
             // cmbStatus
             // 
@@ -276,25 +290,17 @@
             this.cmbGender.Size = new System.Drawing.Size(199, 29);
             this.cmbGender.TabIndex = 18;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Cooper Black", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(725, 203);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(99, 20);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Profile Pic";
-            // 
             // pbProfilePic
             // 
             this.pbProfilePic.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.pbProfilePic.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbProfilePic.Location = new System.Drawing.Point(622, 182);
+            this.pbProfilePic.Location = new System.Drawing.Point(580, 182);
             this.pbProfilePic.Name = "pbProfilePic";
             this.pbProfilePic.Size = new System.Drawing.Size(94, 79);
+            this.pbProfilePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbProfilePic.TabIndex = 16;
             this.pbProfilePic.TabStop = false;
+            this.pbProfilePic.Click += new System.EventHandler(this.pbProfilePic_Click);
             // 
             // btnClear
             // 
@@ -522,7 +528,6 @@
         private System.Windows.Forms.ComboBox cmbStatus;
         private System.Windows.Forms.ComboBox cmbPosition;
         private System.Windows.Forms.ComboBox cmbGender;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pbProfilePic;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnDelete;
@@ -539,5 +544,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnSelectImage;
     }
 }

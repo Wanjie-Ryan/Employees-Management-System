@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,7 @@ namespace Employees_Management_System.UI
 
         EmployeeBLL empBLL = new EmployeeBLL();
         EmployeeDAL empDAL = new EmployeeDAL();
+        string imageName = "no-image.png";
 
         private void btnSalary_Click(object sender, EventArgs e)
         {
@@ -261,6 +263,54 @@ namespace Employees_Management_System.UI
             {
                 DataTable dt = empDAL.Select();
                 DGVEmpData.DataSource = dt;
+            }
+        }
+
+        private void pbProfilePic_Click(object sender, EventArgs e) { }
+
+        private void btnSelectImage_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+
+            try
+            {
+                if (open.ShowDialog() == DialogResult.OK)
+                {
+                    if (open.CheckFileExists)
+                    {
+                        pbProfilePic.Image = new Bitmap(open.FileName);
+
+                        string ext = Path.GetExtension(open.FileName);
+
+                        Random random = new Random();
+
+                        int RandInt = random.Next(1, 1000);
+
+                        imageName = "Employee_" + RandInt + ext;
+
+                        string sourcepath = open.FileName;
+
+                        string path = Application.StartupPath.Substring(
+                            0,
+                            Application.StartupPath.Length - 10
+                        );
+
+                        string destinationpath = path + "\\images\\" + imageName;
+
+                        File.Copy(sourcepath, destinationpath);
+
+                        MessageBox.Show(
+                            "Image uploaded successfully",
+                            "Image Uploaded",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Information
+                        );
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }
