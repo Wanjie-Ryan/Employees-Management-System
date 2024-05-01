@@ -1,12 +1,12 @@
-﻿using Employees_Management_System.Data_Logics;
-using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Employees_Management_System.Data_Logics;
+using MySql.Data.MySqlClient;
 
 namespace Employees_Management_System.Data_Manipulation
 {
@@ -16,7 +16,7 @@ namespace Employees_Management_System.Data_Manipulation
         {
             DataTable dt = new DataTable();
 
-            using(MySqlConnection conn = new MySqlConnection(Program.GetConnectionString()))
+            using (MySqlConnection conn = new MySqlConnection(Program.GetConnectionString()))
             {
                 try
                 {
@@ -26,7 +26,7 @@ namespace Employees_Management_System.Data_Manipulation
                     conn.Open();
                     adapter.Fill(dt);
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
@@ -43,11 +43,12 @@ namespace Employees_Management_System.Data_Manipulation
         {
             bool Success = false;
 
-            using(MySqlConnection conn = new MySqlConnection(Program.GetConnectionString()))
+            using (MySqlConnection conn = new MySqlConnection(Program.GetConnectionString()))
             {
                 try
                 {
-                    string sql = "UPDATE employees SET salary = @salary WHERE employee_id = @employee_id";
+                    string sql =
+                        "UPDATE employees SET salary = @salary WHERE employee_id = @employee_id";
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
 
                     cmd.Parameters.AddWithValue("@salary", s.salary);
@@ -65,7 +66,7 @@ namespace Employees_Management_System.Data_Manipulation
                         Success = false;
                     }
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
@@ -82,13 +83,24 @@ namespace Employees_Management_System.Data_Manipulation
         {
             DataTable dt = new DataTable();
 
-            using(MySqlConnection conn = new MySqlConnection(Program.GetConnectionString()))
+            using (MySqlConnection conn = new MySqlConnection(Program.GetConnectionString()))
             {
                 try
                 {
-                    string sql = "SELECT * FROM employees WHERE fullname LIKE '%" +keyword+ "%' OR position LIKE '%" + keyword+ "%' OR gender LIKE '%" +keyword+ "%' ";
+                    string sql =
+                        "SELECT * FROM employees WHERE fullname LIKE '%"
+                        + keyword
+                        + "%' OR position LIKE '%"
+                        + keyword
+                        + "%' OR gender LIKE '%"
+                        + keyword
+                        + "%' ";
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                    conn.Open();
+                    adapter.Fill(dt);
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
@@ -97,7 +109,6 @@ namespace Employees_Management_System.Data_Manipulation
                     conn.Close();
                 }
             }
-
 
             return dt;
         }
