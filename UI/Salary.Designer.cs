@@ -238,6 +238,7 @@
             this.dgvSalary.RowTemplate.Height = 24;
             this.dgvSalary.Size = new System.Drawing.Size(492, 167);
             this.dgvSalary.TabIndex = 0;
+            this.dgvSalary.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvSalary_RowHeaderMouseClick);
             // 
             // groupBox1
             // 
@@ -278,6 +279,7 @@
             this.btnClear.TabIndex = 25;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnUpdate
             // 
@@ -291,6 +293,7 @@
             this.btnUpdate.TabIndex = 24;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // txtSalary
             // 
