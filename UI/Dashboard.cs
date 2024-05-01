@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Employees_Management_System.Data_Manipulation;
 using K4os.Hash.xxHash;
 
 namespace Employees_Management_System.UI
@@ -17,6 +18,8 @@ namespace Employees_Management_System.UI
         {
             InitializeComponent();
         }
+
+        DashboardDAL dash = new DashboardDAL();
 
         private void pictureBox2_Click(object sender, EventArgs e) { }
 
@@ -59,6 +62,10 @@ namespace Employees_Management_System.UI
             }
             lblTime.Text = $"{greeting} {Login.identityname}";
             //lblusername.Text = Login.identityname;
+
+            lblTotalEmpCount.Text = dash.CountAllEmployees().ToString();
+            lblActiveEmp.Text = dash.CountActiveEmployee().ToString();
+            lblInactiveEmp.Text = dash.CountInactiveEmployees().ToString();
         }
     }
 }

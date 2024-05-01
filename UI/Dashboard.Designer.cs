@@ -45,11 +45,11 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblInactiveEmp = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.lblInactiveEmp = new System.Windows.Forms.Label();
+            this.lblActiveEmp = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -242,7 +242,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Indigo;
-            this.panel5.Controls.Add(this.label4);
+            this.panel5.Controls.Add(this.lblInactiveEmp);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.pictureBox6);
             this.panel5.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -251,16 +251,16 @@
             this.panel5.Size = new System.Drawing.Size(251, 136);
             this.panel5.TabIndex = 1;
             // 
-            // label4
+            // lblInactiveEmp
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(171, 18);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 32);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "100";
+            this.lblInactiveEmp.AutoSize = true;
+            this.lblInactiveEmp.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInactiveEmp.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblInactiveEmp.Location = new System.Drawing.Point(171, 18);
+            this.lblInactiveEmp.Name = "lblInactiveEmp";
+            this.lblInactiveEmp.Size = new System.Drawing.Size(65, 32);
+            this.lblInactiveEmp.TabIndex = 6;
+            this.lblInactiveEmp.Text = "100";
             // 
             // label3
             // 
@@ -286,7 +286,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Indigo;
-            this.panel4.Controls.Add(this.lblInactiveEmp);
+            this.panel4.Controls.Add(this.lblActiveEmp);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.pictureBox5);
             this.panel4.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -295,16 +295,16 @@
             this.panel4.Size = new System.Drawing.Size(248, 136);
             this.panel4.TabIndex = 1;
             // 
-            // lblInactiveEmp
+            // lblActiveEmp
             // 
-            this.lblInactiveEmp.AutoSize = true;
-            this.lblInactiveEmp.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInactiveEmp.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblInactiveEmp.Location = new System.Drawing.Point(167, 18);
-            this.lblInactiveEmp.Name = "lblInactiveEmp";
-            this.lblInactiveEmp.Size = new System.Drawing.Size(65, 32);
-            this.lblInactiveEmp.TabIndex = 3;
-            this.lblInactiveEmp.Text = "100";
+            this.lblActiveEmp.AutoSize = true;
+            this.lblActiveEmp.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblActiveEmp.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblActiveEmp.Location = new System.Drawing.Point(167, 18);
+            this.lblActiveEmp.Name = "lblActiveEmp";
+            this.lblActiveEmp.Size = new System.Drawing.Size(65, 32);
+            this.lblActiveEmp.TabIndex = 3;
+            this.lblActiveEmp.Text = "100";
             // 
             // label2
             // 
@@ -433,10 +433,10 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblInactiveEmp;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Label lblInactiveEmp;
+        private System.Windows.Forms.Label lblActiveEmp;
         private System.Windows.Forms.Label lblTotalEmpCount;
         private System.Windows.Forms.PictureBox pictureBox3;
     }

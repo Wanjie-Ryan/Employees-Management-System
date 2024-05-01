@@ -1,11 +1,11 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Employees_Management_System.Data_Manipulation
 {
@@ -15,7 +15,7 @@ namespace Employees_Management_System.Data_Manipulation
         {
             int count = 0;
 
-            using(MySqlConnection conn = new MySqlConnection(Program.GetConnectionString()))
+            using (MySqlConnection conn = new MySqlConnection(Program.GetConnectionString()))
             {
                 try
                 {
@@ -24,7 +24,7 @@ namespace Employees_Management_System.Data_Manipulation
                     conn.Open();
                     count = Convert.ToInt32(cmd.ExecuteScalar());
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
@@ -41,7 +41,7 @@ namespace Employees_Management_System.Data_Manipulation
         {
             int count = 0;
 
-            using(MySqlConnection conn = new MySqlConnection(Program.GetConnectionString()))
+            using (MySqlConnection conn = new MySqlConnection(Program.GetConnectionString()))
             {
                 try
                 {
@@ -51,7 +51,7 @@ namespace Employees_Management_System.Data_Manipulation
                     conn.Open();
                     count = Convert.ToInt32(cmd.ExecuteScalar());
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
@@ -68,16 +68,16 @@ namespace Employees_Management_System.Data_Manipulation
         {
             int count = 0;
 
-            using(MySqlConnection conn = new MySqlConnection(Program.GetConnectionString()))
+            using (MySqlConnection conn = new MySqlConnection(Program.GetConnectionString()))
             {
                 try
                 {
-                    string sql = "SELECT COUNT(*) FROM employees WHERE salary LIKE 'Inactive%'";
+                    string sql = "SELECT COUNT(*) FROM employees WHERE status LIKE 'Active%'";
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
                     conn.Open();
                     count = Convert.ToInt32(cmd.ExecuteScalar());
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
